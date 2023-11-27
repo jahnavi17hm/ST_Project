@@ -90,6 +90,41 @@ public class kruskalTest {
         int result6 = solution.spanningTree(v6, adj6);
         assertEquals(25, result6);
 
+        int v7 = 4;
+        ArrayList<ArrayList<ArrayList<Integer>>> adj7 = new ArrayList<>();
+        adj7.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(0, 1, 2)))));
+        adj7.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(1, 2, 1)))));
+        adj7.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(2, 3, 3)))));
+        adj7.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(3, 0, 4)))));
 
+        int result7 = solution.spanningTree(v7, adj7);
+        assertEquals(0, result7);
+
+        // Test 8
+        int v8 = 5;
+        ArrayList<ArrayList<ArrayList<Integer>>> adj8 = new ArrayList<>();
+        adj8.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(0, 1, 3)))));
+        adj8.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(1, 2, 2)))));
+        adj8.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(2, 3, 1)))));
+        adj8.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(3, 4, 4)))));
+        adj8.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(4, 0, 5)))));
+
+        int result8 = solution.spanningTree(v8, adj8);
+        assertEquals(0, result8);
+
+
+        // Test 9
+        int v9 = 6;
+        ArrayList<ArrayList<ArrayList<Integer>>> adj9 = new ArrayList<>();
+        adj9.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(0, 1, 2)))));
+        adj9.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(0, 2, 4)))));
+        adj9.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(1, 3, 3)))));
+        adj9.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(2, 3, 1)))));
+        adj9.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(2, 4, 5)))));
+        adj9.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(3, 5, 2)))));
+        adj9.add(new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(4, 5, 3)))));
+
+        int result9 = solution.spanningTree(v9, adj9);
+        assertEquals(17, result9);
     }
 }

@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.List;
-
 public class Sorting {
     public List<Integer> bubbleSort(List<Integer> arr) {
         int n = arr.size();
@@ -16,7 +15,6 @@ public class Sorting {
         }
         return arr;
     }
-
     public List<Integer> insertionSort(List<Integer> arr) {
         int n = arr.size();
         for (int i = 1; i < n; ++i) {
@@ -31,7 +29,6 @@ public class Sorting {
         }
         return arr;
     }
-
     public List<Integer> selectionSort(List<Integer> arr) {
         int n = arr.size();
         for (int i = 0; i < n - 1; i++) {
@@ -46,7 +43,6 @@ public class Sorting {
         }
         return arr;
     }
-
     // Radix Sort
     public List<Integer> radixSort(List<Integer> arr) {
         int max = getMax(arr);
@@ -57,7 +53,6 @@ public class Sorting {
 
         return arr;
     }
-
     private int getMax(List<Integer> arr) {
         int max = arr.get(0);
         for (int i = 1; i < arr.size(); i++) {

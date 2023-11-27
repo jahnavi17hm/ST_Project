@@ -1,20 +1,16 @@
 package org.example;
 import java.util.*;
-
 public class Dfs
 {
     static class Graph {
         private final Map<Integer, List<Integer>> adjacencyList;
-
         public Graph() {
             this.adjacencyList = new HashMap<>();
         }
-
         public void addEdge(int source, int destination) {
             adjacencyList.computeIfAbsent(source, k -> new ArrayList<>()).add(destination);
             adjacencyList.computeIfAbsent(destination, k -> new ArrayList<>()).add(source);
         }
-
         public void removeEdge(int source, int destination) {
             adjacencyList.get(source).remove(Integer.valueOf(destination));
             adjacencyList.get(destination).remove(Integer.valueOf(source));
@@ -30,10 +26,8 @@ public class Dfs
                     components++;
                 }
             }
-
             return components;
         }
-
         private void dfsTraversal(int startNode, Set<Integer> visited) {
             Stack<Integer> stack = new Stack<>();
             stack.push(startNode);
@@ -41,7 +35,6 @@ public class Dfs
 
             while (!stack.isEmpty()) {
                 int current = stack.pop();
-
                 for (int neighbor : adjacencyList.getOrDefault(current, Collections.emptyList())) {
                     if (!visited.contains(neighbor)) {
                         stack.push(neighbor);
@@ -50,7 +43,6 @@ public class Dfs
                 }
             }
         }
-
         public boolean isBipartite() {
             Set<Integer> visited = new HashSet<>();
             Map<Integer, Integer> color = new HashMap<>();
@@ -62,10 +54,8 @@ public class Dfs
                     }
                 }
             }
-
             return true;
         }
-
         private boolean bipartiteDfs(int startNode, Set<Integer> visited, Map<Integer, Integer> color) {
             Stack<Integer> stack = new Stack<>();
             stack.push(startNode);
@@ -85,10 +75,8 @@ public class Dfs
                     }
                 }
             }
-
             return true;
         }
-
         public boolean hasCycle() {
             Set<Integer> visited = new HashSet<>();
 
@@ -99,10 +87,8 @@ public class Dfs
                     }
                 }
             }
-
             return false;
         }
-
         private boolean hasCycleDfs(int current, Set<Integer> visited, int parent) {
             visited.add(current);
 
@@ -115,10 +101,7 @@ public class Dfs
                     return true; // Cycle detected
                 }
             }
-
             return false;
         }
     }
-
-
 }

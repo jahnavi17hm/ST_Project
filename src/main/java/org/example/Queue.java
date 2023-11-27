@@ -1,6 +1,4 @@
 package org.example;
-
-
 import java.util.LinkedList;
 
 public class Queue {
@@ -26,7 +24,6 @@ public class Queue {
                 System.out.println("Queue is full!");
             }
         }
-
         public int dequeue() {
             if (size > 0) {
                 int value = queueArray[front];
@@ -55,7 +52,6 @@ public class Queue {
             this.stackArray = new int[maxSize];
             this.top = -1;
         }
-
         public void push(int value) {
             if (top < maxSize - 1) {
                 stackArray[++top] = value;
@@ -88,7 +84,6 @@ public class Queue {
             this.next = null;
         }
     }
-
     // Queue implementation using LinkedList
     static class QueueUsingLinkedList {
         private LinkedList<Integer> list = new LinkedList<>();
@@ -110,7 +105,6 @@ public class Queue {
             return list.isEmpty();
         }
     }
-
     // Stack implementation using linked list
     static class StackUsingLinkedList {
         private LinkedListNode top;
@@ -131,11 +125,9 @@ public class Queue {
                 return -1;
             }
         }
-
         public boolean isEmpty() {
             return top == null;
         }
     }
-
 }
 

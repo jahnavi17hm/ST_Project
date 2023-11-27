@@ -29,7 +29,6 @@ public class QuickSort
         arr.set(j, temp);
         return j;
     }
-
     static void qs(List<Integer> arr, int low, int high)
     {
         if (low < high)
